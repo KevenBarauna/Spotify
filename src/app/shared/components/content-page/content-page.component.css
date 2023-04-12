@@ -1,5 +1,6 @@
 .content-page{
-  background-color: cadetblue;
+  background-color: var(--body);
+  color: var(--text-body);
   height: 100vh;
   width: 90%;
   margin-left: 10%;

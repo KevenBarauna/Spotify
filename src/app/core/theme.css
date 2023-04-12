@@ -1,0 +1,17 @@
+:root{
+  --primary: #1DB954;
+  --body: #FFFFFF;
+  --text-menu:#212121;
+  --text-body: #212121;
+}
+
+:root .dark-theme{
+  --primary: #1DB954;
+  --body: #212121;
+  --text-menu:#FFFFFF;
+  --text-body: #FFFFFF;
+}
+
+body{
+  background-color: var(--body);
+}

@@ -2,5 +2,6 @@
   position: absolute;
   min-height: 100vh;
   width: 10%;
-  background-color: bisque;
+  background-color: var(--primary);
+  color: var(--text-menu)
 }
