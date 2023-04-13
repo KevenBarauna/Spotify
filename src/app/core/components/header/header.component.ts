@@ -1,14 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { enumRoutes } from 'src/app/shared/enums/routes.enum';
+import { enumTheme } from 'src/app/shared/enums/theme.enum';
+import { RouterInterface } from 'src/app/shared/interfaces/routes.interface';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+
+  routes: RouterInterface[] = []
+  themeCurrent: string = 'light'
+
+  ngOnInit(): void {
+    this.routes = enumRoutes;
+  }
 
   toggleTheme(): void{
-    document.body.classList.toggle('dark-theme');
+    const theme = document.body.classList.toggle('dark-theme');
+    this.themeCurrent = theme ? enumTheme.DARK : enumTheme.LIGHT
   };
 
 }

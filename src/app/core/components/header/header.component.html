@@ -1,5 +1,17 @@
 <header>
-  <img src="" alt="logo">
-  <p>header works!</p>
-  <button (click)="toggleTheme()">Alterar tema</button>
+  <div class="content-header">
+    <img class="logo-icon" src="assets/logo-icon-{{themeCurrent}}.png" alt="logo">
+    <div class="button-icon">
+      <img class="icon" src="assets/icon-back.svg" alt="Voltar">
+    </div>
+    <div class="button-icon">
+      <img class="icon" src="assets/icon-go.svg" alt="Avançar">
+    </div>
+    <ul *ngFor="let route of routes">
+      <li>{{route.name}}</li>
+    </ul>
+    <div class="button-theme">
+      <img (click)="toggleTheme()" class="icon-theme" src="assets/theme-icon-{{themeCurrent}}.png" alt="Tema">
+    </div>
+  </div>
 </header>

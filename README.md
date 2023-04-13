@@ -98,6 +98,9 @@ https://whimsical.com/spotify-clone-2qozLeKqsifP8yxH4m99p2
 * 0.0.0 (11/04/2023)
   - New project
 	
+<a href="https://www.flaticon.com/free-icons/theme" title="theme icons">Theme icons created by JessiGue - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/theme" title="theme icons">Theme icons created by Dewi Sari - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>
 
 ## FAQ:
 

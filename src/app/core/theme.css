@@ -3,13 +3,17 @@
   --body: #FFFFFF;
   --text-menu:#212121;
   --text-body: #212121;
+  --text-menu-bold:#121212;
+  --text-body-bold: #121212;
 }
 
 :root .dark-theme{
   --primary: #1DB954;
   --body: #212121;
-  --text-menu:#FFFFFF;
-  --text-body: #FFFFFF;
+  --text-menu:#e7e7e7;
+  --text-body: #e7e7e7;
+  --text-menu-bold:#FFFFFF;
+  --text-body-bold: #FFFFFF;
 }
 
 body{
