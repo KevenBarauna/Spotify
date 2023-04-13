@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
 import { HeaderModule } from './core/components/header/header.module';
-import { SideMenuModule } from './core/components/side-menu/side-menu.module';
 import { ContentPageModule } from './shared/components/content-page/content-page.module';
 
 @NgModule({
@@ -13,8 +14,8 @@ import { ContentPageModule } from './shared/components/content-page/content-page
   imports: [
     BrowserModule,
     HeaderModule,
-    SideMenuModule,
     ContentPageModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

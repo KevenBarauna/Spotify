@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { enumRoutes } from 'src/app/shared/enums/routes.enum';
+import { enumMenu } from 'src/app/shared/enums/routes.enum';
 import { enumTheme } from 'src/app/shared/enums/theme.enum';
 import { RouterInterface } from 'src/app/shared/interfaces/routes.interface';
 
@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   themeCurrent: string = 'light'
 
   ngOnInit(): void {
-    this.routes = enumRoutes;
+    this.routes = enumMenu;
   }
 
   toggleTheme(): void{
