@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: enumRoutes.ABOUT, component: PageNotFoundComponent },
   { path: enumRoutes.PLAY_LIST, component: PageNotFoundComponent },
   { path: enumRoutes.SONG_PLAY, component: PageNotFoundComponent },
-  { path: enumRoutes.NOT_FOUND, component: PageNotFoundComponent }
+  { path: enumRoutes.NOT_FOUND, component: PageNotFoundComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

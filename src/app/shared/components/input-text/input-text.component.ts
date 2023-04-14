@@ -1,11 +1,14 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-input-text',
-  templateUrl: './app-input.component.html',
-  styleUrls: ['./app-input.component.css'],
-  encapsulation: ViewEncapsulation.Emulated,
+  templateUrl: './input-text.component.html',
+  styleUrls: ['./input-text.component.css'],
 })
 export class InputTextComponent {
+  @Input() class: string = ''
+  @Input() type: string ="text"
+  @Input() placeholder: string ="Input"
 
+  valueInput: string = '';
 }

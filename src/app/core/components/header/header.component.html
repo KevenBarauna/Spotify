@@ -8,7 +8,7 @@
       <img class="icon" src="assets/icon-go.svg" alt="Avançar">
     </div>
     <ul *ngFor="let route of routes">
-      <li>{{route.name}}</li>
+      <li [routerLink]="['/'+ route.route]">{{route.name}}</li>
     </ul>
     <div class="button-theme">
       <img (click)="toggleTheme()" class="icon-theme" src="assets/theme-icon-{{themeCurrent}}.png" alt="Tema">

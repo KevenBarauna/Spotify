@@ -3,11 +3,11 @@ import { RouterInterface } from "../interfaces/routes.interface";
 export enum enumRoutes {
   EMPTY = '',
   HOME = 'home',
-  LOGIN = 'toDo',
-  ABOUT = 'toDo',
-  PLAY_LIST = 'toDo',
-  SONG_PLAY = 'toDo',
-  NOT_FOUND = 'notFound'
+  LOGIN = 'toDoLOGIN',
+  ABOUT = 'toDoABOUT',
+  PLAY_LIST = 'toDoPLAY_LIST',
+  SONG_PLAY = 'toDoSONG_PLAY',
+  NOT_FOUND = 'notFoundNOT_FOUND'
 };
 
 export const enumMenu: RouterInterface[] = [

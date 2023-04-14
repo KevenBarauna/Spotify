@@ -5,6 +5,7 @@
   --text-body: #212121;
   --text-menu-bold:#121212;
   --text-body-bold: #121212;
+  --color-gray: #979797;
 }
 
 :root .dark-theme{
@@ -14,6 +15,7 @@
   --text-body: #e7e7e7;
   --text-menu-bold:#FFFFFF;
   --text-body-bold: #FFFFFF;
+  --color-gray: #979797;
 }
 
 body{
