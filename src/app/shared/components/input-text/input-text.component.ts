@@ -6,9 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./input-text.component.css'],
 })
 export class InputTextComponent {
-  @Input() class: string = ''
+  @Input() classStyle: string = ''
   @Input() type: string ="text"
   @Input() placeholder: string ="Input"
+  @Input() label: string = ''
 
   valueInput: string = '';
 }

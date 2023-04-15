@@ -1,3 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./../../../SpotifyClone/spotify/src/app/core/reset.css";
 @import "./../../../SpotifyClone/spotify/src/app/core/theme.css";
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+a:hover{
+  text-decoration: underline;
+  color: var(--primary-hover);
+}

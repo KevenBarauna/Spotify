@@ -1,0 +1,52 @@
+.button-social-facebook {
+  cursor: pointer;
+  background-color: #405A93;
+  color: #FFFFFF;
+  margin: 6px;
+  font-weight: 600;
+  width: 312px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 24px;
+  border-radius: 30px;
+  border-style: none;
+}
+
+.button-social-google {
+  cursor: pointer;
+  border: 2px solid rgb(83, 83, 83);
+  background-color: #fdfdfd;
+  margin: 6px;
+  color: #252525;
+  font-weight: 600;
+  width: 312px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 24px;
+  border-radius: 30px;
+}
+
+.button-social-google:hover, .button-social-facebook:hover{
+  box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.20);
+}
+
+.button-submit{
+  background-color: var(--primary);
+  padding: 18px 44px;
+  border: none;
+  border-radius: 35px;
+  font-weight: 600;
+  font-size: 14pt;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.button-submit:hover{
+  background-color: var(--primary-hover);
+  box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.20);
+}
+

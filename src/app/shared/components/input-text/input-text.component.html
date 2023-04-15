@@ -1,5 +1,7 @@
-<input [class]="class" [type]="type" [placeholder]="placeholder" (keyup)="valueInput = $any($event.target).value">
-<br/>
-{{valueInput}}
+<div class="container-input-text">
+  <label *ngIf="label">{{label}}</label>
+  <input [class]="classStyle" [type]="type" [placeholder]="placeholder" (keyup)="valueInput = $any($event.target).value">
+  <p class="message">{{valueInput}}</p>
+</div>
 
 

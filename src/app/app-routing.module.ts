@@ -8,8 +8,8 @@ import { PageLoginComponent } from './features/page-login/page-login.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: enumRoutes.EMPTY, component: PageLoginComponent },
-  { path: enumRoutes.HOME, component: PageLoginComponent },
+  { path: enumRoutes.EMPTY, component: PageNotFoundComponent },
+  { path: enumRoutes.HOME, component: PageNotFoundComponent },
   { path: enumRoutes.LOGIN, component: PageLoginComponent },
   { path: enumRoutes.ABOUT, component: PageNotFoundComponent },
   { path: enumRoutes.PLAY_LIST, component: PageNotFoundComponent },

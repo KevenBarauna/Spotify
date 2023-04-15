@@ -1,5 +1,6 @@
 :root{
   --primary: #1DB954;
+  --primary-hover: #1daf50;
   --body: #FFFFFF;
   --text-menu:#212121;
   --text-body: #212121;
@@ -10,6 +11,7 @@
 
 :root .dark-theme{
   --primary: #1DB954;
+  --primary-hover: #1daf50;
   --body: #212121;
   --text-menu:#e7e7e7;
   --text-body: #e7e7e7;
