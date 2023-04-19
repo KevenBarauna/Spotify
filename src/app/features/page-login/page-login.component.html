@@ -12,10 +12,10 @@
     <p class="finish-line-text">ou</p>
     <hr/>
   </div>
-  <form>
-    <app-input-text type="email" placeholder="Insira seu e-mail." label="Qual é o seu e-mail?"></app-input-text>
-    <app-input-text type="password" placeholder="Crie uma senha" label="Crie uma senha"></app-input-text>
-    <app-input-text type="text" placeholder="Insira um nome de perfil" label="Como devemos chamar você?"></app-input-text>
+  <form [formGroup]="loginForm">
+    <app-input-text [message]="loginForm.get('email')?.errors?.['required'] && messageErrorRequired" controlName="email" type="email" placeholder="Insira seu e-mail." label="Qual é o seu e-mail?"></app-input-text>
+    <app-input-text [message]="loginForm.get('password')?.errors?.['required'] && messageErrorRequired" controlName="password" type="password" placeholder="Crie uma senha" label="Crie uma senha"></app-input-text>
+    <app-input-text [message]="loginForm.get('nameProfile')?.errors?.['required'] && messageErrorRequired" controlName="nameProfile" type="text" placeholder="Insira um nome de perfil" label="Como devemos chamar você?"></app-input-text>
     <p class="label">Qual a sua data de nascimento?</p>
     <div class="container-data">
       <app-input-text classStyle="flex" type="text" placeholder="DD"></app-input-text>
@@ -38,7 +38,7 @@
     </div>
     <p class="small-text">Para saber mais sobre como o Spotify coleta, utiliza, compartilha e protege seus dados pessoais, leia a <a>Política de Privacidade do Spotify.</a></p>
     <div class="container-button-submit">
-      <app-button classStyle="button-submit" text="Inscrever-se"></app-button>
+      <app-button [isDisabled]="loginForm.invalid" classStyle="button-submit" text="Inscrever-se"></app-button>
     </div>
     <p class="small-text">Já tem uma conta? <a>Faça login.</a></p>
   </form>

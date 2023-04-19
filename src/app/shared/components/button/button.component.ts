@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
   @Input() classStyle: string = ''
   @Input() text: string ="Button"
+  @Input() isDisabled: boolean = false;
 
 }
