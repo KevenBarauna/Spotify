@@ -2,7 +2,7 @@
   <label *ngIf="label">{{label}}</label>
   <input *ngIf="controlName" [formControlName]="controlName" [class]="classStyle" [type]="type" [placeholder]="placeholder" (keyup)="valueInput = $any($event.target).value">
   <input *ngIf="!controlName" [class]="classStyle" [type]="type" [placeholder]="placeholder" (keyup)="valueInput = $any($event.target).value">
-  <p *ngIf="message" class="message">{{message}}</p>
+  <p *ngIf="message" class="message-error">{{message}}</p>
   <!-- <p class="message">{{valueInput}}</p> -->
 </div>
 

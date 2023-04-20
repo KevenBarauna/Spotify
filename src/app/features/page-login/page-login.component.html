@@ -12,7 +12,7 @@
     <p class="finish-line-text">ou</p>
     <hr/>
   </div>
-  <form [formGroup]="loginForm">
+  <form [formGroup]="loginForm" (submit)="redirectLogin()">
     <app-input-text [message]="loginForm.get('email')?.errors?.['required'] && messageErrorRequired" controlName="email" type="email" placeholder="Insira seu e-mail." label="Qual é o seu e-mail?"></app-input-text>
     <app-input-text [message]="loginForm.get('password')?.errors?.['required'] && messageErrorRequired" controlName="password" type="password" placeholder="Crie uma senha" label="Crie uma senha"></app-input-text>
     <app-input-text [message]="loginForm.get('nameProfile')?.errors?.['required'] && messageErrorRequired" controlName="nameProfile" type="text" placeholder="Insira um nome de perfil" label="Como devemos chamar você?"></app-input-text>

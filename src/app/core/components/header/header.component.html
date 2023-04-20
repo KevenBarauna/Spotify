@@ -1,12 +1,6 @@
 <header>
-  <div class="content-header">
+  <div class="content-header" *ngIf="!user?.nameProfile; else headerUserTemplate">
     <img class="logo-icon" src="assets/logo-icon-{{themeCurrent}}.png" alt="logo">
-    <div class="button-icon">
-      <img class="icon" src="assets/icon-back.svg" alt="Voltar">
-    </div>
-    <div class="button-icon">
-      <img class="icon" src="assets/icon-go.svg" alt="Avançar">
-    </div>
     <ul *ngFor="let route of routes">
       <li [routerLink]="['/'+ route.route]">{{route.name}}</li>
     </ul>
@@ -15,3 +9,19 @@
     </div>
   </div>
 </header>
+
+
+
+<ng-template #headerUserTemplate>
+  <div class="content-header">
+    <img class="logo-icon-login" src="assets/logo-icon-{{themeCurrent}}.png" alt="logo">
+    <p class="userName">{{user?.nameProfile}}</p>
+    <ul *ngFor="let route of routes">
+      <li  *ngIf="route.name != 'Login'" [routerLink]="['/'+ route.route]">{{route.name | routerPipe}}</li>
+    </ul>
+    <p (click)="logout()"class="logout">Sair</p>
+    <div class="button-theme">
+      <img (click)="toggleTheme()" class="icon-theme" src="assets/theme-icon-{{themeCurrent}}.png" alt="Tema">
+    </div>
+  </div>
+</ng-template>
