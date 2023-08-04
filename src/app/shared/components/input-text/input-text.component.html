@@ -1,9 +1,6 @@
-<div class="container-input-text">
-  <label *ngIf="label">{{label}}</label>
-  <input *ngIf="controlName" [formControlName]="controlName" [class]="classStyle" [type]="type" [placeholder]="placeholder" (keyup)="valueInput = $any($event.target).value">
-  <input *ngIf="!controlName" [class]="classStyle" [type]="type" [placeholder]="placeholder" (keyup)="valueInput = $any($event.target).value">
-  <p *ngIf="message" class="message-error">{{message}}</p>
-  <!-- <p class="message">{{valueInput}}</p> -->
+<div class="container-input-text" [id]="label">
+  <label *ngIf="label" [for]="controlName">{{label}}</label>
+  <input [formControlName]="controlName" [class]="classStyle" [type]="type" [placeholder]="placeholder" (keyup)="valueInput = $any($event.target).value">
+  <p *ngIf="isShowMessage" class="message-error">{{message}}</p>
 </div>
-
 

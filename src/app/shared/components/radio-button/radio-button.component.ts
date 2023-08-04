@@ -10,5 +10,7 @@ export class RadioButtonComponent {
   @Input() label: string = ''
   @Input() disabled: boolean = false;
   @Input() id: string = ''
-
+  @Input() isShowMessage: boolean = false;
+  @Input() message: string = '';
+  @Input() controlName: string = '';
 }

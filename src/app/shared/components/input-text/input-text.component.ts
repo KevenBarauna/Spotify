@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ControlContainer, FormBuilder, FormControl, FormGroup, FormGroupDirective } from '@angular/forms';
+import { ControlContainer, FormGroupDirective } from '@angular/forms';
 
 @Component({
   selector: 'app-input-text',
@@ -17,8 +17,9 @@ export class InputTextComponent {
   @Input() type: string ="text";
   @Input() placeholder: string ="Input";
   @Input() label: string = '';
-  @Input() controlName!: string;
+  @Input() isShowMessage: boolean = false;
   @Input() message: string = '';
+  @Input() controlName: string = '';
 
   valueInput: string = '';
 

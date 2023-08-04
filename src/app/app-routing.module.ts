@@ -6,11 +6,12 @@ import { PageNotFoundModule } from './features/page-not-found/page-not-found.mod
 import { enumRoutes } from 'src/app/shared/enums/routes.enum';
 import { PageLoginComponent } from './features/page-login/page-login.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
+import { AuthGuard } from './core/authentication/auth.guard';
 
 const routes: Routes = [
   { path: enumRoutes.EMPTY, component: PageNotFoundComponent },
   { path: enumRoutes.HOME, component: PageNotFoundComponent },
-  { path: enumRoutes.LOGIN, component: PageLoginComponent },
+  { path: enumRoutes.LOGIN, component: PageLoginComponent, canActivate: [AuthGuard] },
   { path: enumRoutes.ABOUT, component: PageNotFoundComponent },
   { path: enumRoutes.PLAY_LIST, component: PageNotFoundComponent },
   { path: enumRoutes.SONG_PLAY, component: PageNotFoundComponent },

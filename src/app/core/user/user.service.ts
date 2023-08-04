@@ -57,4 +57,11 @@ export class UserService {
     localStorage.removeItem(KEY);
   }
 
+  isLogged(): boolean{
+    if(this.getUserStorage()?.email){
+      return true
+    }
+    return false
+  }
+
 }

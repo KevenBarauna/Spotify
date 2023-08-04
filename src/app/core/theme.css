@@ -2,6 +2,11 @@
   --primary: #1DB954;
   --primary-hover: #1daf50;
   --body: #FFFFFF;
+
+  /* INPUT */
+  --input-background: #FFFFFF;
+  --input-text: #212121;
+
   --text-menu:#212121;
   --text-body: #212121;
   --text-menu-bold:#121212;
@@ -13,6 +18,10 @@
   --primary: #1DB954;
   --primary-hover: #1daf50;
   --body: #212121;
+    /* INPUT */
+    --input-background: #2c2929;
+    --input-text: #FFFFFF;
+
   --text-menu:#e7e7e7;
   --text-body: #e7e7e7;
   --text-menu-bold:#FFFFFF;
