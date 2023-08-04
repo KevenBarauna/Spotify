@@ -22,27 +22,6 @@ input:hover{
   font-weight: 600;
 }
 
-.message{
-  color: #b5b5b5;
-  margin: 0px;
-  padding: 0px;
-  font-size: 8pt;
-  text-align: right;
-  font-weight: 400;
-  width: 100%;
-}
-
-.message-error{
-  color: #b81414;
-  margin: 0px;
-  padding: 0px;
-  font-size: 8pt;
-  text-align: right;
-  font-weight: 400;
-  width: 100%;
-}
-
-
 input.flex{
   width: 88px;
   margin: 0 19px;

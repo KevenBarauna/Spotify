@@ -9,5 +9,6 @@ export class CheckBoxComponent {
   @Input() classStyle: string = ''
   @Input() label: string = ''
   @Input() disabled: boolean = false;
-
+  @Input() isShowMessage: boolean = false;
+  @Input() message: string = '';
 }

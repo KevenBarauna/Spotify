@@ -1,6 +1,5 @@
 <input type="radio" [name]="id" [value]="label">
 <label [for]="id" >{{label}}</label>
-<br>
-<p *ngIf="isShowMessage" class="message-error">{{message}}</p>
+<app-message-error [message]="message" [isShowMessage]="isShowMessage"></app-message-error>
 <br>
 

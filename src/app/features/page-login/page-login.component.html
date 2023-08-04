@@ -18,9 +18,9 @@
     <app-input-text label="Como devemos chamar você?" placeholder="Insira um nome de perfil" controlName="nameProfile" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('nameProfile')" type="text"></app-input-text>
     <p class="label">Qual a sua data de nascimento?</p>
     <div class="container-data">
-      <app-input-text placeholder="DD" controlName="birthDay" classStyle="flex" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('birthDay')" type="number"></app-input-text>
+      <app-input-text placeholder="Dia" controlName="birthDay" classStyle="flex" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('birthDay')" type="number"></app-input-text>
       <app-input-text placeholder="Mês" controlName="birthMonth" classStyle="flex" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('birthMonth')" type="number"></app-input-text>
-      <app-input-text placeholder="AAA" controlName="birthYear" classStyle="flex" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('birthYear')" type="number"></app-input-text>
+      <app-input-text placeholder="Ano" controlName="birthYear" classStyle="flex" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('birthYear')" type="number"></app-input-text>
     </div>
     <p class="label">Qual é o seu gênero?</p>
     <div class="container-radio-button">
@@ -34,7 +34,7 @@
     <div class="container-checkbox-button">
       <app-checkbox-button label="Não quero receber mensagens de marketing do Spotify" controlName="isMessageMarketing" />
       <app-checkbox-button label="Compartilhar meus dados cadastrais com os provedores de conteúdo do Spotify para fins de marketing." controlName="isShareData"/>
-      <app-checkbox-button label="Eu concordo com os Termos e Condições de Uso do Spotify." controlName="isTermsConditions"/>
+      <app-checkbox-button label="Eu concordo com os Termos e Condições de Uso do Spotify." controlName="isTermsConditions" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('isTermsConditions')"/>
     </div>
     <p class="small-text">Para saber mais sobre como o Spotify coleta, utiliza, compartilha e protege seus dados pessoais, leia a <a>Política de Privacidade do Spotify.</a></p>
     <div class="container-button-submit">

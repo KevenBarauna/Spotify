@@ -29,9 +29,9 @@ export class PageLoginComponent implements OnInit {
       birthDay: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(2)]),
       birthMonth: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(2)]),
       birthYear: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(4)]),
-      gender: new FormControl('', [Validators.required]),
-      isMessageMarketing: new FormControl('', [Validators.required]),
-      isShareData: new FormControl('', [Validators.required]),
+      gender: new FormControl(''),
+      isMessageMarketing: new FormControl(''),
+      isShareData: new FormControl(''),
       isTermsConditions: new FormControl('', [Validators.required]),
     })
 
@@ -61,7 +61,6 @@ export class PageLoginComponent implements OnInit {
   submitLoginForm(): void {
     console.log('ENVIAR: ', this.loginForm)
     // const genero = Array.from(document.getElementsByName('gender')).find(x => x?.checked === true)?.value;
-    // console.log('Gere', )
     if (this.loginForm.invalid) return;
 
     const formData: UserFormInterface = {
