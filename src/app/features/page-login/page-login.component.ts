@@ -18,37 +18,39 @@ export class PageLoginComponent implements OnInit {
 
   loginForm!: FormGroup;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {
+    const tokenUrl = this.authService.getTokenUrlCallback();
+    this.authService.setToken(tokenUrl)
+  }
 
   ngOnInit(): void {
 
     this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(2), Validators.maxLength(30)]),
-      password: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]),
-      nameProfile: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]),
-      birthDay: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(2)]),
-      birthMonth: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(2)]),
-      birthYear: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(4)]),
+      email: new FormControl('keven@teste.com', [Validators.required, Validators.email, Validators.minLength(2), Validators.maxLength(30)]),
+      password: new FormControl('123456', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]),
+      nameProfile: new FormControl('Keven', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]),
+      birthDay: new FormControl('11', [Validators.required, Validators.minLength(2), Validators.maxLength(2)]),
+      birthMonth: new FormControl('10', [Validators.required, Validators.minLength(2), Validators.maxLength(2)]),
+      birthYear: new FormControl('97', [Validators.required, Validators.minLength(2), Validators.maxLength(4)]),
       gender: new FormControl(''),
       isMessageMarketing: new FormControl(''),
       isShareData: new FormControl(''),
-      isTermsConditions: new FormControl('', [Validators.required]),
+      isTermsConditions: new FormControl(''),
     })
 
     const tokenUrl = this.authService.getTokenUrlCallback();
     const tokenStorage = this.authService.getToken();
-    if (tokenUrl) {
-      this.authService.setToken(tokenUrl);
-      this.redirectHome();
-    }
-    if (tokenStorage) {
-      this.redirectHome()
-    }
+    // if (tokenUrl) {
+    //   this.authService.setToken(tokenUrl);
+    //   this.redirectHome();
+    // }
+    // if (tokenStorage) {
+    //   this.redirectHome()
+    // }
   }
 
   getMessageErrorInput(nameInput: string) {
     const message = getMessageValidate(this.loginForm.get(nameInput));
-    console.log(`Mensagem Validação - ${nameInput}: `, message)
     return message;
   }
 

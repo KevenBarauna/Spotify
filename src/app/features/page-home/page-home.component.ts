@@ -16,14 +16,19 @@ import { enumRoutes } from 'src/app/shared/enums/routes.enum';
 })
 export class PageHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+
+    const tokenUrl = this.authService.getTokenUrlCallback();
+    if (tokenUrl) {
+      this.authService.setToken(tokenUrl);
+    }
+  }
 
   openTreeView(idMain: string, idChild: string): void {
 
     const mainElement = document.getElementById(idMain);
-    console.log('Pai:',mainElement)
     if(mainElement){
       mainElement.classList.toggle("icon-tree-view-down");
     }
