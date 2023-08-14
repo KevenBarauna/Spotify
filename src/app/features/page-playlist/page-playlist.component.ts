@@ -10,6 +10,7 @@ import { AlbumsItemsInterface } from 'src/app/shared/interfaces/albumItems.inter
 export class PagePlayListComponent implements OnInit {
 
   public listAlbum: AlbumsItemsInterface[] = [];
+  public urlPlayTrack: string = '';
 
   constructor(private service: Service) {
     const url = 'browse/new-releases?country=BR&locale=pt-BR%2Cpt%3Bq%3D0.9%2Cen-US%3Bq%3D0.8%2Cen %3Bq%3D0.7&offset=1&limit=50'
@@ -25,6 +26,12 @@ export class PagePlayListComponent implements OnInit {
 
   onClickPayAlbum(album: AlbumsItemsInterface){
     console.log('Tocar: ', album)
+    this.urlPlayTrack = '';
+    const url = `albums/${album.id}/tracks`
+    this.service.getServiceQuery(url).subscribe((response) => {
+      console.log('API: ', response)
+      this.urlPlayTrack = response.items[0].preview_url;
+    });
   }
 
 

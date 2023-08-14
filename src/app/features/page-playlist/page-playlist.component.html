@@ -1,7 +1,10 @@
 <h1>Minha tela de play list</h1>
-<p>Paragrafo</p>
-<p>Quantidade de itens: {{listAlbum.length}}</p>
-<p>Nome do primeiro item: {{listAlbum[0].name}}</p>
+<p>-------------------</p>
+<audio *ngIf="urlPlayTrack" controls>
+  <source src="{{urlPlayTrack}}" type="audio/ogg">
+  <source src="{{urlPlayTrack}}" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 <p>-------------------</p>
 <div class="container">
   <div *ngFor="let album of listAlbum">
