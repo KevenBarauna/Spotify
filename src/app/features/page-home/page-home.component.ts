@@ -35,7 +35,6 @@ export class PageHomeComponent implements OnInit {
 
     const childElement = document.getElementById(idChild);
     if(childElement){
-
       const isOpen = childElement.style.visibility === 'visible'
       if(!isOpen){
         childElement.style.visibility = 'visible';

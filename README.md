@@ -111,7 +111,7 @@ $ ng new spotify
 
 Start:
 ```sh
-$ ng serve --opne
+$ ng serve --open
 ```
 
 Development server

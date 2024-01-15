@@ -13,6 +13,8 @@
   --text-menu-bold:#121212;
   --text-body-bold: #121212;
   --color-gray: #979797;
+
+  --color-lilac: #3C0068;
 }
 
 :root .dark-theme{
@@ -29,6 +31,8 @@
   --text-menu-bold:#FFFFFF;
   --text-body-bold: #FFFFFF;
   --color-gray: #979797;
+
+  --color-lilac: rgb(68, 68, 68);
 }
 
 body{

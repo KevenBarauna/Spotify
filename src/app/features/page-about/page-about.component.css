@@ -1,0 +1,34 @@
+.card-image-glow {
+  min-height: 12rem;
+  background-color: var( --color-lilac);
+  color:#ffffff;
+}
+
+h2{
+  padding: 20px;
+  font-size: 30pt;
+}
+
+h4{
+  padding: 10px 20px;
+  font-size: 15pt;
+}
+
+.text-card{
+  padding: 20px;
+  font-size: 12pt;
+}
+
+section{
+  padding: 10px;
+}
+
+h3{
+  color: var( --color-lilac);
+  margin-bottom: 16px;
+  font-size: 18pt;
+}
+
+p{
+  width: 50%;
+}
