@@ -1,6 +1,0 @@
-<div class="container-input-text" [id]="label">
-  <label *ngIf="label" [for]="controlName">{{label}}</label>
-  <input [formControlName]="controlName" [class]="classStyle" [type]="type" [placeholder]="placeholder" (keyup)="valueInput = $any($event.target).value">
-  <app-message-error [message]="message" [isShowMessage]="isShowMessage"></app-message-error>
-</div>
-
