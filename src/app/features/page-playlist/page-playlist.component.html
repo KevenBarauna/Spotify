@@ -1,11 +1,4 @@
-<h1>Minha tela de play list</h1>
-<p>-------------------</p>
-<audio *ngIf="urlPlayTrack" controls>
-  <source src="{{urlPlayTrack}}" type="audio/ogg">
-  <source src="{{urlPlayTrack}}" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-<p>-------------------</p>
+<app-audio [urlPlayTrack]="urlPlayTrack" />
 <div class="container">
   <div *ngFor="let album of listAlbum">
     <div class="container-album" (click)="onClickPayAlbum(album)">
@@ -17,4 +10,12 @@
       <p class="album-artists">{{concatenateNameArtists(album)}}</p>
     </div>
   </div>
+
+  <div *ngIf="listAlbum.length === 0">
+    <p class="message-error">Não há músicas disponíveis para exibição no Spotify. Por
+      favor, verifique se você está logado e tente novamente.</p>
+    <img class="error-image" src="assets/img-login-error.png" alt="Imagem de erro">
+    <a href="https://storyset.com/online">Online illustrations by Storyset</a>
+  </div>
+
 </div>

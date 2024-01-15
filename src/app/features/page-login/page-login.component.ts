@@ -40,13 +40,12 @@ export class PageLoginComponent implements OnInit {
 
     const tokenUrl = this.authService.getTokenUrlCallback();
     const tokenStorage = this.authService.getToken();
-    // if (tokenUrl) {
-    //   this.authService.setToken(tokenUrl);
-    //   this.redirectHome();
-    // }
-    // if (tokenStorage) {
-    //   this.redirectHome()
-    // }
+    if (tokenUrl) {
+      this.authService.setToken(tokenUrl);
+      this.redirect(enumRoutes.PLAY_LIST);
+    } else if (tokenStorage) {
+      this.redirect(enumRoutes.PLAY_LIST)
+    }
   }
 
   getMessageErrorInput(nameInput: string) {
@@ -55,10 +54,11 @@ export class PageLoginComponent implements OnInit {
   }
 
 
-  redirectHome(): void {
-    this.router.navigateByUrl(enumRoutes.HOME);
+  redirect(route: string): void {
+    this.router.navigateByUrl(route);
     this.loginForm.reset()
   }
+
 
   submitLoginForm(): void {
     console.log('ENVIAR: ', this.loginForm)

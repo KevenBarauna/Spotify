@@ -5,7 +5,7 @@ export enum enumRoutes {
   HOME = 'home',
   LOGIN = 'login',
   ABOUT = 'sobre',
-  PLAY_LIST = 'toDoPLAY_LIST',
+  PLAY_LIST = 'playList',
   SONG_PLAY = 'toDoSONG_PLAY',
   NOT_FOUND = 'notFoundNOT_FOUND'
 };

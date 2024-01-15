@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Service } from 'src/app/core/service/service';
 import { AlbumsItemsInterface } from 'src/app/shared/interfaces/albumItems.interface';
 
@@ -7,7 +7,7 @@ import { AlbumsItemsInterface } from 'src/app/shared/interfaces/albumItems.inter
   templateUrl: './page-playlist.component.html',
   styleUrls: ['./page-playlist.component.css'],
 })
-export class PagePlayListComponent implements OnInit {
+export class PagePlayListComponent {
 
   public listAlbum: AlbumsItemsInterface[] = [];
   public urlPlayTrack: string = '';
@@ -33,9 +33,5 @@ export class PagePlayListComponent implements OnInit {
       this.urlPlayTrack = response.items[0].preview_url;
     });
   }
-
-
-  ngOnInit(): void { }
-
 
 }
