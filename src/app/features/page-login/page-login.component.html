@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="container-image">
+    <img class="image-logo" src="assets/logo-dual-color-light.png" alt="Logo">
+  </div>
+  <h2>Inscreva-se grátis e comece a curtir.</h2>
+  <div class="container-button-social">
+    <app-button classStyle="button-social-facebook" text="Inscreva-se com o Facebook"></app-button>
+    <app-button classStyle="button-social-google" text="Inscreva-se com o Google" buttonSocialGoogleDirective></app-button>
+  </div>
+  <div class="finish-line">
+    <hr/>
+    <p class="finish-line-text">ou</p>
+    <hr/>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm()" #formDir="ngForm">
+    <app-input-text label="Qual é o seu e-mail?" placeholder="Insira seu e-mail." controlName="email" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('email')" type="email"></app-input-text>
+    <app-input-text label="Crie uma senha" placeholder="Crie uma senha" controlName="password" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('password')" type="password"></app-input-text>
+    <app-input-text label="Como devemos chamar você?" placeholder="Insira um nome de perfil" controlName="nameProfile" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('nameProfile')" type="text"></app-input-text>
+    <p class="label">Qual a sua data de nascimento?</p>
+    <div class="container-data">
+      <app-input-text placeholder="Dia" controlName="birthDay" classStyle="flex" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('birthDay')" type="number"></app-input-text>
+      <app-input-text placeholder="Mês" controlName="birthMonth" classStyle="flex" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('birthMonth')" type="number"></app-input-text>
+      <app-input-text placeholder="Ano" controlName="birthYear" classStyle="flex" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('birthYear')" type="number"></app-input-text>
+    </div>
+    <p class="label">Qual é o seu gênero?</p>
+    <div class="container-radio-button">
+      <app-radio-button id="gender" controlName="gender" label="Masculino"/>
+      <app-radio-button id="gender" controlName="gender" label="Feminino"/>
+      <app-radio-button id="gender" controlName="gender" label="Não binário"/>
+      <app-radio-button id="gender" controlName="gender" label="Outros"/>
+      <app-radio-button id="gender" controlName="gender" label="Prefiro não dizer"/>
+    </div>
+
+    <div class="container-checkbox-button">
+      <app-checkbox-button label="Não quero receber mensagens de marketing do Spotify" controlName="isMessageMarketing" />
+      <app-checkbox-button label="Compartilhar meus dados cadastrais com os provedores de conteúdo do Spotify para fins de marketing." controlName="isShareData"/>
+      <app-checkbox-button label="Eu concordo com os Termos e Condições de Uso do Spotify." controlName="isTermsConditions" [isShowMessage]="formDir.submitted" [message]="getMessageErrorInput('isTermsConditions')"/>
+    </div>
+    <p class="small-text">Para saber mais sobre como o Spotify coleta, utiliza, compartilha e protege seus dados pessoais, leia a <a>Política de Privacidade do Spotify.</a></p>
+    <div class="container-button-submit">
+      <app-button [isDisabled]="loginForm.invalid" classStyle="button-submit" text="Inscrever-se"></app-button>
+    </div>
+    <p class="small-text">Já tem uma conta? <a>Faça login.</a></p>
+  </form>
+</div>

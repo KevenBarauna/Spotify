@@ -1,0 +1,40 @@
+:root{
+  --primary: #1DB954;
+  --primary-hover: #1daf50;
+  --body: #FFFFFF;
+
+  /* INPUT */
+  --input-background: #FFFFFF;
+  --input-text: #212121;
+  --input-background-hover: #e7e7e7;
+
+  --text-menu:#212121;
+  --text-body: #212121;
+  --text-menu-bold:#121212;
+  --text-body-bold: #121212;
+  --color-gray: #979797;
+
+  --color-lilac: #3C0068;
+}
+
+:root .dark-theme{
+  --primary: #1DB954;
+  --primary-hover: #1daf50;
+  --body: #212121;
+  /* INPUT */
+  --input-background: #2c2929;
+  --input-text: #FFFFFF;
+  --input-background-hover: #2c2929;
+
+  --text-menu:#e7e7e7;
+  --text-body: #e7e7e7;
+  --text-menu-bold:#FFFFFF;
+  --text-body-bold: #FFFFFF;
+  --color-gray: #979797;
+
+  --color-lilac: rgb(68, 68, 68);
+}
+
+body{
+  background-color: var(--body);
+}
